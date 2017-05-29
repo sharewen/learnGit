@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title></title>
+	<style type="text/css" media="screen">
+	div{margin:10px;}
+		.exp1{
+		width:200px;
+    height: 150px;
+    border-radius: 50% / 100% 100% 0 0;
+    background: #8BC34A;
+		}
+
+		.exp2{
+		margin-top: 10px;
+		width:150px;
+    height: 200px;
+    border-radius:  100% 0 0 100% / 50%;
+    background: #8BC34A;
+    outline: solid 5px red;
+		}
+
+.button {
+	margin-top: 10px;
+    width:200px;
+    height:100px;
+    position:relative;
+    left:100px;
+    line-height: 100px;
+    text-align:center;
+    font-weight: bolder;
+    
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top:0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transform: skew(45deg);
+  background: red;
+}
+
+.example1{
+	margin-top:40px;
+	width:140px;
+	height: 140px;
+	position: relative;
+	
+	line-height: 100px;
+}
+.example1::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+	transform: rotate(45deg);
+	background: #abcdef;
+}
+.example2{
+    background: #8BC34A;
+    background: linear-gradient(135deg, transparent 15px, #8BC34A 0) top left,
+                linear-gradient(-135deg, transparent 15px, #8BC34A 0) top right,
+                linear-gradient(-45deg, transparent 15px, #8BC34A 0) bottom right,
+                linear-gradient(45deg, transparent 15px, #8BC34A 0) bottom left;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    
+    padding: 1em 1.2em;
+    max-width: 12em;
+    line-height: 1.5em;
+}
+	</style>
+</head>
+<body>
+
+<div class="exp1"></div>
+
+<div class="exp2"></div>
+
+<div class="button">transform:skew()</div>
+
+ <div class="example1">transform:rotate()</div>
+
+<div class="example2">ey, focus! You’re supposed to be looking at my corners, not reading my text. The text is just placeholder!</div>
+
+</body>
+</html>
